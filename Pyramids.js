@@ -22,7 +22,7 @@ function draw(){
     for(let i=0; i<scribs.length; i++){
     scribs[i].display();
     scribs[i].move();
-    scribs[i].recter(mouseX, mouseY);
+    scribs[i].freak(mouseX, mouseY);
 }
 }
 
@@ -50,7 +50,7 @@ class Scrib{
     }
      
     
-    recter(mx, my){
+    freak(mx, my){
         let d = dist(mx, my, this.x, this.y);
         //mx and my are mousepositions
         if(d<this.w){
@@ -62,7 +62,7 @@ class Scrib{
         }
 
     move(){
-        let speed = random(0, 3);
+        let speed = random(0, 5);
         this.y += speed;
         if(this.y > height){
             this.y = 0;
